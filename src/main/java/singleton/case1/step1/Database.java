@@ -6,8 +6,13 @@ public class Database {
 
     private String name;
 
-    public Database(String name) {
-        this.name = name;
+    private Database(String name) {
+        try {
+            Thread.sleep(100);
+            this.name = name;
+        } catch (Exception e) {
+
+        }
     }
 
     public static Database getInstance(String name) {
